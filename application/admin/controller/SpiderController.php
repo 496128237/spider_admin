@@ -177,7 +177,7 @@ class SpiderController extends CommonController{
         $data['author']='admin';
         $data['hits']=rand(100,1000);
         $data['posttime']=time();
-        $data['checkinfo']='true';
+        $data['checkinfo'] = 'false';
 
         return $data;
     }
