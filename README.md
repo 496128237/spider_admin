@@ -1,6 +1,6 @@
 TP5Admin 
 ===================
-作者QQ:5552123(阿杜)
+作者:咸鱼
 ===================
 
 TP5Admin V2.0使用ThinkPHP5.10核心版框架开发.
@@ -66,8 +66,8 @@ window环境 LAMP 配置
 ~~~
 
 
-## 参与开发
-注册并登录 Github 帐号， fork 本项目并进行改动。
+## 感谢
+阿杜TP5Admin后台权限管理系统
 
 更多细节参阅 https://github.com/duzhenxun/TP5Admin
 
