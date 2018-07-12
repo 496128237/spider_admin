@@ -1,0 +1,515 @@
+---------------------------------------------------------------
+[ 2018-07-11T19:55:20+08:00 ] ::1 ::1 GET /public/static/artDialog/icons/loading.gif
+[ info ] spider.com/public/static/artDialog/icons/loading.gif [运行时间：0.330244s][吞吐率：3.03req/s] [内存消耗：1,790.05kb] [文件加载：30]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/spider_admin/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'static',
+    2 => 'artDialog',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'spider.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://spider.com/public/static/artDialog/dialog.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'user_name=758b8Pv57EwRJDiQ_KrSbGXWraEMoflhLD09ZRqQM39eqQ; user_id=d01eAWMwT5ulTn2u4d1Z4vQz0g4d3QYrcELAL2HH; _ga=GA1.2.1153975451.1531223903; _gid=GA1.2.240096542.1531223903; PHPSESSID=ac005f2b3a47a9de81a650aee26204f1; thinkphp_show_page_trace=0|0; Hm_lvt_851619594aa1d1fb8c108cde832cc127=1531214708,1531273538; Hm_lpvt_851619594aa1d1fb8c108cde832cc127=1531280549',
+)
+[ info ] [ PARAM ] array (
+  'icons' => 'loading.gif',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-11T19:55:57+08:00 ] ::1 ::1 POST /index.php/admin/group/editRule
+[ info ] spider.com/index.php/admin/group/editRule [运行时间：0.192523s][吞吐率：5.19req/s] [内存消耗：3,939.74kb] [文件加载：46]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/spider_admin/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'group',
+    2 => 'editRule',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'spider.com',
+  'connection' => 'keep-alive',
+  'content-length' => '184',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://spider.com',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://spider.com/index.php/admin/group/rule?gid=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; user_name=758b8Pv57EwRJDiQ_KrSbGXWraEMoflhLD09ZRqQM39eqQ; user_id=d01eAWMwT5ulTn2u4d1Z4vQz0g4d3QYrcELAL2HH; _ga=GA1.2.1153975451.1531223903; _gid=GA1.2.240096542.1531223903; PHPSESSID=ac005f2b3a47a9de81a650aee26204f1; thinkphp_show_page_trace=0|0; Hm_lvt_851619594aa1d1fb8c108cde832cc127=1531214708,1531273538; Hm_lpvt_851619594aa1d1fb8c108cde832cc127=1531280549',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+  'rules' => 
+  array (
+    0 => '32',
+    1 => '33',
+    2 => '34',
+    3 => '35',
+    4 => '39',
+    5 => '40',
+    6 => '41',
+    7 => '48',
+    8 => '42',
+    9 => '43',
+    10 => '44',
+    11 => '45',
+  ),
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\GroupController->editRule[ /Applications/MAMP/htdocs/spider_admin/application/admin/controller/GroupController.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/spider_admin/thinkphp/tpl/dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001989s ] mysql:dbname=spider;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zxcms_admin_log` [ RunTime:0.004512s ]
+[ sql ] [ SQL ] INSERT INTO `zxcms_admin_log` (`querystring` , `m` , `c` , `a` , `userid` , `username` , `ip` , `time`) VALUES ('' , 'admin' , 'Group' , 'editrule' , 1 , 'admin' , 0 , 1531310157) [ RunTime:0.001174s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zxcms_admin_group` [ RunTime:0.004433s ]
+[ sql ] [ SQL ] UPDATE `zxcms_admin_group`  SET `updatetime`=1531310157,`rules`='32,33,34,35,39,40,41,48,42,43,44,45'  WHERE  `id` = 1 [ RunTime:0.001471s ]
+---------------------------------------------------------------
+[ 2018-07-11T19:56:00+08:00 ] ::1 ::1 GET /index.php/admin/group/rule?gid=1
+[ info ] spider.com/index.php/admin/group/rule?gid=1 [运行时间：0.133138s][吞吐率：7.51req/s] [内存消耗：4,214.45kb] [文件加载：48]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/spider_admin/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'group',
+    2 => 'rule',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'spider.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://spider.com/index.php/admin/group/editRule',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; user_name=758b8Pv57EwRJDiQ_KrSbGXWraEMoflhLD09ZRqQM39eqQ; user_id=d01eAWMwT5ulTn2u4d1Z4vQz0g4d3QYrcELAL2HH; _ga=GA1.2.1153975451.1531223903; _gid=GA1.2.240096542.1531223903; PHPSESSID=ac005f2b3a47a9de81a650aee26204f1; thinkphp_show_page_trace=0|0; Hm_lvt_851619594aa1d1fb8c108cde832cc127=1531214708,1531273538; Hm_lpvt_851619594aa1d1fb8c108cde832cc127=1531280549',
+)
+[ info ] [ PARAM ] array (
+  'gid' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\GroupController->rule[ /Applications/MAMP/htdocs/spider_admin/application/admin/controller/GroupController.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/spider_admin/application/admin/view/group/rule.html [ array (
+  0 => 'rules',
+  1 => 'menu',
+) ]
+[ info ] [ RUN ] app\admin\widget\Menu->index[ /Applications/MAMP/htdocs/spider_admin/application/admin/widget/Menu.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000667s ] mysql:dbname=spider;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zxcms_admin_log` [ RunTime:0.022401s ]
+[ sql ] [ SQL ] INSERT INTO `zxcms_admin_log` (`querystring` , `m` , `c` , `a` , `userid` , `username` , `ip` , `time`) VALUES ('?gid=1' , 'admin' , 'Group' , 'rule' , 1 , 'admin' , 0 , 1531310160) [ RunTime:0.001308s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zxcms_admin_group` [ RunTime:0.004993s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `zxcms_admin_group` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000872s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zxcms_menu` [ RunTime:0.004110s ]
+[ sql ] [ SQL ] SELECT * FROM `zxcms_menu` ORDER BY listorder asc [ RunTime:0.001023s ]
+[ sql ] [ SQL ] SELECT * FROM `zxcms_menu` WHERE  `display` = 1 ORDER BY listorder asc [ RunTime:0.000863s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `zxcms_menu` WHERE  `c` = 'Group'  AND `a` = 'rule' LIMIT 1 [ RunTime:0.000644s ]
+[ sql ] [ SQL ] SELECT `name` FROM `zxcms_menu` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000527s ]
+[ error ] [8]Use of undefined constant id - assumed 'id'[/Applications/MAMP/htdocs/spider_admin/runtime/temp/7ccaa00480e3cd5c9b91a5c499df2f5e.php:162]
+[ error ] [8]Use of undefined constant id - assumed 'id'[/Applications/MAMP/htdocs/spider_admin/runtime/temp/7ccaa00480e3cd5c9b91a5c499df2f5e.php:162]
+[ error ] [8]Use of undefined constant id - assumed 'id'[/Applications/MAMP/htdocs/spider_admin/runtime/temp/7ccaa00480e3cd5c9b91a5c499df2f5e.php:168]
+[ error ] [8]Use of undefined constant id - assumed 'id'[/Applications/MAMP/htdocs/spider_admin/runtime/temp/7ccaa00480e3cd5c9b91a5c499df2f5e.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[/Applications/MAMP/htdocs/spider_admin/runtime/temp/7ccaa00480e3cd5c9b91a5c499df2f5e.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[/Applications/MAMP/htdocs/spider_admin/runtime/temp/7ccaa00480e3cd5c9b91a5c499df2f5e.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[/Applications/MAMP/htdocs/spider_admin/runtime/temp/7ccaa00480e3cd5c9b91a5c499df2f5e.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[/Applications/MAMP/htdocs/spider_admin/runtime/temp/7ccaa00480e3cd5c9b91a5c499df2f5e.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[/Applications/MAMP/htdocs/spider_admin/runtime/temp/7ccaa00480e3cd5c9b91a5c499df2f5e.php:168]
+[ error ] [8]Use of undefined constant id - assumed 'id'[/Applications/MAMP/htdocs/spider_admin/runtime/temp/7ccaa00480e3cd5c9b91a5c499df2f5e.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[/Applications/MAMP/htdocs/spider_admin/runtime/temp/7ccaa00480e3cd5c9b91a5c499df2f5e.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[/Applications/MAMP/htdocs/spider_admin/runtime/temp/7ccaa00480e3cd5c9b91a5c499df2f5e.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[/Applications/MAMP/htdocs/spider_admin/runtime/temp/7ccaa00480e3cd5c9b91a5c499df2f5e.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[/Applications/MAMP/htdocs/spider_admin/runtime/temp/7ccaa00480e3cd5c9b91a5c499df2f5e.php:168]
+[ error ] [8]Use of undefined constant id - assumed 'id'[/Applications/MAMP/htdocs/spider_admin/runtime/temp/7ccaa00480e3cd5c9b91a5c499df2f5e.php:162]
+[ error ] [8]Use of undefined constant id - assumed 'id'[/Applications/MAMP/htdocs/spider_admin/runtime/temp/7ccaa00480e3cd5c9b91a5c499df2f5e.php:168]
+[ error ] [8]Use of undefined constant id - assumed 'id'[/Applications/MAMP/htdocs/spider_admin/runtime/temp/7ccaa00480e3cd5c9b91a5c499df2f5e.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[/Applications/MAMP/htdocs/spider_admin/runtime/temp/7ccaa00480e3cd5c9b91a5c499df2f5e.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[/Applications/MAMP/htdocs/spider_admin/runtime/temp/7ccaa00480e3cd5c9b91a5c499df2f5e.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[/Applications/MAMP/htdocs/spider_admin/runtime/temp/7ccaa00480e3cd5c9b91a5c499df2f5e.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[/Applications/MAMP/htdocs/spider_admin/runtime/temp/7ccaa00480e3cd5c9b91a5c499df2f5e.php:168]
+[ error ] [8]Use of undefined constant id - assumed 'id'[/Applications/MAMP/htdocs/spider_admin/runtime/temp/7ccaa00480e3cd5c9b91a5c499df2f5e.php:162]
+[ error ] [8]Use of undefined constant id - assumed 'id'[/Applications/MAMP/htdocs/spider_admin/runtime/temp/7ccaa00480e3cd5c9b91a5c499df2f5e.php:168]
+[ error ] [8]Use of undefined constant id - assumed 'id'[/Applications/MAMP/htdocs/spider_admin/runtime/temp/7ccaa00480e3cd5c9b91a5c499df2f5e.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[/Applications/MAMP/htdocs/spider_admin/runtime/temp/7ccaa00480e3cd5c9b91a5c499df2f5e.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[/Applications/MAMP/htdocs/spider_admin/runtime/temp/7ccaa00480e3cd5c9b91a5c499df2f5e.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[/Applications/MAMP/htdocs/spider_admin/runtime/temp/7ccaa00480e3cd5c9b91a5c499df2f5e.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[/Applications/MAMP/htdocs/spider_admin/runtime/temp/7ccaa00480e3cd5c9b91a5c499df2f5e.php:162]
+[ error ] [8]Use of undefined constant id - assumed 'id'[/Applications/MAMP/htdocs/spider_admin/runtime/temp/7ccaa00480e3cd5c9b91a5c499df2f5e.php:168]
+[ error ] [8]Use of undefined constant id - assumed 'id'[/Applications/MAMP/htdocs/spider_admin/runtime/temp/7ccaa00480e3cd5c9b91a5c499df2f5e.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[/Applications/MAMP/htdocs/spider_admin/runtime/temp/7ccaa00480e3cd5c9b91a5c499df2f5e.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[/Applications/MAMP/htdocs/spider_admin/runtime/temp/7ccaa00480e3cd5c9b91a5c499df2f5e.php:162]
+[ error ] [8]Use of undefined constant id - assumed 'id'[/Applications/MAMP/htdocs/spider_admin/runtime/temp/7ccaa00480e3cd5c9b91a5c499df2f5e.php:168]
+[ error ] [8]Use of undefined constant id - assumed 'id'[/Applications/MAMP/htdocs/spider_admin/runtime/temp/7ccaa00480e3cd5c9b91a5c499df2f5e.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[/Applications/MAMP/htdocs/spider_admin/runtime/temp/7ccaa00480e3cd5c9b91a5c499df2f5e.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[/Applications/MAMP/htdocs/spider_admin/runtime/temp/7ccaa00480e3cd5c9b91a5c499df2f5e.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[/Applications/MAMP/htdocs/spider_admin/runtime/temp/7ccaa00480e3cd5c9b91a5c499df2f5e.php:176]
+---------------------------------------------------------------
+[ 2018-07-11T19:56:01+08:00 ] ::1 ::1 GET /public/static/artDialog/icons/loading.gif
+[ info ] spider.com/public/static/artDialog/icons/loading.gif [运行时间：0.059608s][吞吐率：16.78req/s] [内存消耗：1,789.66kb] [文件加载：30]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/spider_admin/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'static',
+    2 => 'artDialog',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'spider.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://spider.com/public/static/artDialog/dialog.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'user_name=758b8Pv57EwRJDiQ_KrSbGXWraEMoflhLD09ZRqQM39eqQ; user_id=d01eAWMwT5ulTn2u4d1Z4vQz0g4d3QYrcELAL2HH; _ga=GA1.2.1153975451.1531223903; _gid=GA1.2.240096542.1531223903; PHPSESSID=ac005f2b3a47a9de81a650aee26204f1; thinkphp_show_page_trace=0|0; Hm_lvt_851619594aa1d1fb8c108cde832cc127=1531214708,1531273538; Hm_lpvt_851619594aa1d1fb8c108cde832cc127=1531280549',
+)
+[ info ] [ PARAM ] array (
+  'icons' => 'loading.gif',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-11T19:56:22+08:00 ] ::1 ::1 GET /index.php/admin/group/index
+[ info ] spider.com/index.php/admin/group/index [运行时间：0.138349s][吞吐率：7.23req/s] [内存消耗：4,020.16kb] [文件加载：45]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/spider_admin/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'group',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'spider.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://spider.com/index.php/admin/group/rule?gid=1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; user_name=758b8Pv57EwRJDiQ_KrSbGXWraEMoflhLD09ZRqQM39eqQ; user_id=d01eAWMwT5ulTn2u4d1Z4vQz0g4d3QYrcELAL2HH; _ga=GA1.2.1153975451.1531223903; _gid=GA1.2.240096542.1531223903; PHPSESSID=ac005f2b3a47a9de81a650aee26204f1; thinkphp_show_page_trace=0|0; Hm_lvt_851619594aa1d1fb8c108cde832cc127=1531214708,1531273538; Hm_lpvt_851619594aa1d1fb8c108cde832cc127=1531280549',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\GroupController->index[ /Applications/MAMP/htdocs/spider_admin/application/admin/controller/GroupController.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/spider_admin/application/admin/view/group/index.html [ array (
+  0 => 'lists',
+) ]
+[ info ] [ RUN ] app\admin\widget\Menu->index[ /Applications/MAMP/htdocs/spider_admin/application/admin/widget/Menu.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000831s ] mysql:dbname=spider;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zxcms_admin_log` [ RunTime:0.004515s ]
+[ sql ] [ SQL ] INSERT INTO `zxcms_admin_log` (`querystring` , `m` , `c` , `a` , `userid` , `username` , `ip` , `time`) VALUES ('' , 'admin' , 'Group' , 'index' , 1 , 'admin' , 0 , 1531310182) [ RunTime:0.001042s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zxcms_admin_group` [ RunTime:0.004066s ]
+[ sql ] [ SQL ] SELECT * FROM `zxcms_admin_group` [ RunTime:0.000806s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zxcms_menu` [ RunTime:0.005166s ]
+[ sql ] [ SQL ] SELECT * FROM `zxcms_menu` WHERE  `display` = 1 ORDER BY listorder asc [ RunTime:0.000748s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `zxcms_menu` WHERE  `c` = 'Group'  AND `a` = 'index' LIMIT 1 [ RunTime:0.000535s ]
+---------------------------------------------------------------
+[ 2018-07-11T19:56:23+08:00 ] ::1 ::1 GET /public/static/artDialog/icons/loading.gif
+[ info ] spider.com/public/static/artDialog/icons/loading.gif [运行时间：0.055438s][吞吐率：18.04req/s] [内存消耗：1,789.66kb] [文件加载：30]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/spider_admin/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'static',
+    2 => 'artDialog',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'spider.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://spider.com/public/static/artDialog/dialog.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'user_name=758b8Pv57EwRJDiQ_KrSbGXWraEMoflhLD09ZRqQM39eqQ; user_id=d01eAWMwT5ulTn2u4d1Z4vQz0g4d3QYrcELAL2HH; _ga=GA1.2.1153975451.1531223903; _gid=GA1.2.240096542.1531223903; PHPSESSID=ac005f2b3a47a9de81a650aee26204f1; thinkphp_show_page_trace=0|0; Hm_lvt_851619594aa1d1fb8c108cde832cc127=1531214708,1531273538; Hm_lpvt_851619594aa1d1fb8c108cde832cc127=1531280549',
+)
+[ info ] [ PARAM ] array (
+  'icons' => 'loading.gif',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-11T19:59:07+08:00 ] ::1 ::1 GET /index.php/admin/Regulation/index
+[ info ] spider.com/index.php/admin/Regulation/index [运行时间：0.283096s][吞吐率：3.53req/s] [内存消耗：4,181.80kb] [文件加载：48]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/spider_admin/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Regulation',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'spider.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://spider.com/index.php/admin/group/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'user_name=758b8Pv57EwRJDiQ_KrSbGXWraEMoflhLD09ZRqQM39eqQ; user_id=d01eAWMwT5ulTn2u4d1Z4vQz0g4d3QYrcELAL2HH; _ga=GA1.2.1153975451.1531223903; _gid=GA1.2.240096542.1531223903; PHPSESSID=ac005f2b3a47a9de81a650aee26204f1; thinkphp_show_page_trace=0|0; Hm_lvt_851619594aa1d1fb8c108cde832cc127=1531214708,1531273538; Hm_lpvt_851619594aa1d1fb8c108cde832cc127=1531280549',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\RegulationController->index[ /Applications/MAMP/htdocs/spider_admin/application/admin/controller/RegulationController.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/spider_admin/application/admin/view/regulation/index.html [ array (
+  0 => 'lists',
+  1 => 'page',
+) ]
+[ info ] [ RUN ] app\admin\widget\Menu->index[ /Applications/MAMP/htdocs/spider_admin/application/admin/widget/Menu.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001396s ] mysql:dbname=spider;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zxcms_admin_log` [ RunTime:0.005365s ]
+[ sql ] [ SQL ] INSERT INTO `zxcms_admin_log` (`querystring` , `m` , `c` , `a` , `userid` , `username` , `ip` , `time`) VALUES ('' , 'admin' , 'Regulation' , 'index' , 1 , 'admin' , 0 , 1531310347) [ RunTime:0.003598s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zxcms_regulation` [ RunTime:0.006592s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `zxcms_regulation` LIMIT 1 [ RunTime:0.000592s ]
+[ sql ] [ SQL ] SELECT * FROM `zxcms_regulation` LIMIT 0,10 [ RunTime:0.000875s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zxcms_menu` [ RunTime:0.006332s ]
+[ sql ] [ SQL ] SELECT * FROM `zxcms_menu` WHERE  `display` = 1 ORDER BY listorder asc [ RunTime:0.001178s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `zxcms_menu` WHERE  `c` = 'Regulation'  AND `a` = 'index' LIMIT 1 [ RunTime:0.001006s ]
+---------------------------------------------------------------
+[ 2018-07-11T19:59:08+08:00 ] ::1 ::1 GET /index.php/admin/Regulation/favicon.ico
+[ info ] spider.com/index.php/admin/Regulation/favicon.ico [运行时间：0.084824s][吞吐率：11.79req/s] [内存消耗：3,373.21kb] [文件加载：43]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/spider_admin/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'Regulation',
+    2 => 'favicon.ico',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'spider.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://spider.com/index.php/admin/Regulation/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; user_name=758b8Pv57EwRJDiQ_KrSbGXWraEMoflhLD09ZRqQM39eqQ; user_id=d01eAWMwT5ulTn2u4d1Z4vQz0g4d3QYrcELAL2HH; _ga=GA1.2.1153975451.1531223903; _gid=GA1.2.240096542.1531223903; PHPSESSID=ac005f2b3a47a9de81a650aee26204f1; thinkphp_show_page_trace=0|0; Hm_lvt_851619594aa1d1fb8c108cde832cc127=1531214708,1531273538; Hm_lpvt_851619594aa1d1fb8c108cde832cc127=1531280549',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000672s ] mysql:dbname=spider;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zxcms_admin_log` [ RunTime:0.003494s ]
+[ sql ] [ SQL ] INSERT INTO `zxcms_admin_log` (`querystring` , `m` , `c` , `a` , `userid` , `username` , `ip` , `time`) VALUES ('' , 'admin' , 'Regulation' , 'favicon.ico' , 1 , 'admin' , 0 , 1531310348) [ RunTime:0.001352s ]
+---------------------------------------------------------------
+[ 2018-07-11T19:59:09+08:00 ] ::1 ::1 GET /public/static/artDialog/icons/loading.gif
+[ info ] spider.com/public/static/artDialog/icons/loading.gif [运行时间：0.352690s][吞吐率：2.84req/s] [内存消耗：1,789.71kb] [文件加载：30]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/spider_admin/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'static',
+    2 => 'artDialog',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'spider.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://spider.com/public/static/artDialog/dialog.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'user_name=758b8Pv57EwRJDiQ_KrSbGXWraEMoflhLD09ZRqQM39eqQ; user_id=d01eAWMwT5ulTn2u4d1Z4vQz0g4d3QYrcELAL2HH; _ga=GA1.2.1153975451.1531223903; _gid=GA1.2.240096542.1531223903; PHPSESSID=ac005f2b3a47a9de81a650aee26204f1; thinkphp_show_page_trace=0|0; Hm_lvt_851619594aa1d1fb8c108cde832cc127=1531214708,1531273538; Hm_lpvt_851619594aa1d1fb8c108cde832cc127=1531280549',
+)
+[ info ] [ PARAM ] array (
+  'icons' => 'loading.gif',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-07-11T19:59:09+08:00 ] ::1 ::1 GET /index.php/admin/regulation/info?id=2
+[ info ] spider.com/index.php/admin/regulation/info?id=2 [运行时间：0.200681s][吞吐率：4.98req/s] [内存消耗：4,045.61kb] [文件加载：46]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/spider_admin/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'regulation',
+    2 => 'info',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'spider.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://spider.com/index.php/admin/Regulation/index',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'user_name=758b8Pv57EwRJDiQ_KrSbGXWraEMoflhLD09ZRqQM39eqQ; user_id=d01eAWMwT5ulTn2u4d1Z4vQz0g4d3QYrcELAL2HH; _ga=GA1.2.1153975451.1531223903; _gid=GA1.2.240096542.1531223903; PHPSESSID=ac005f2b3a47a9de81a650aee26204f1; thinkphp_show_page_trace=0|0; Hm_lvt_851619594aa1d1fb8c108cde832cc127=1531214708,1531273538; Hm_lpvt_851619594aa1d1fb8c108cde832cc127=1531280549',
+)
+[ info ] [ PARAM ] array (
+  'id' => '2',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\admin\controller\RegulationController->info[ /Applications/MAMP/htdocs/spider_admin/application/admin/controller/RegulationController.php ]
+[ info ] [ VIEW ] /Applications/MAMP/htdocs/spider_admin/application/admin/view/regulation/info.html [ array (
+  0 => 'info',
+) ]
+[ info ] [ RUN ] app\admin\widget\Menu->index[ /Applications/MAMP/htdocs/spider_admin/application/admin/widget/Menu.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000886s ] mysql:dbname=spider;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zxcms_admin_log` [ RunTime:0.004843s ]
+[ sql ] [ SQL ] INSERT INTO `zxcms_admin_log` (`querystring` , `m` , `c` , `a` , `userid` , `username` , `ip` , `time`) VALUES ('?id=2' , 'admin' , 'Regulation' , 'info' , 1 , 'admin' , 0 , 1531310349) [ RunTime:0.001295s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zxcms_regulation` [ RunTime:0.005050s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`tip`,`reg_list`,`reg_title`,`reg_dec`,`reg_content` FROM `zxcms_regulation` WHERE  `id` = 2 LIMIT 1 [ RunTime:0.000873s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zxcms_menu` [ RunTime:0.005131s ]
+[ sql ] [ SQL ] SELECT * FROM `zxcms_menu` WHERE  `display` = 1 ORDER BY listorder asc [ RunTime:0.000703s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `zxcms_menu` WHERE  `c` = 'Regulation'  AND `a` = 'info' LIMIT 1 [ RunTime:0.001219s ]
+[ sql ] [ SQL ] SELECT `name` FROM `zxcms_menu` WHERE  `id` = 43 LIMIT 1 [ RunTime:0.000933s ]
+---------------------------------------------------------------
+[ 2018-07-11T19:59:10+08:00 ] ::1 ::1 GET /index.php/admin/regulation/favicon.ico
+[ info ] spider.com/index.php/admin/regulation/favicon.ico [运行时间：0.132838s][吞吐率：7.53req/s] [内存消耗：3,373.78kb] [文件加载：43]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/spider_admin/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'regulation',
+    2 => 'favicon.ico',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'spider.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://spider.com/index.php/admin/regulation/info?id=2',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'thinkphp_show_page_trace=0|0; user_name=758b8Pv57EwRJDiQ_KrSbGXWraEMoflhLD09ZRqQM39eqQ; user_id=d01eAWMwT5ulTn2u4d1Z4vQz0g4d3QYrcELAL2HH; _ga=GA1.2.1153975451.1531223903; _gid=GA1.2.240096542.1531223903; PHPSESSID=ac005f2b3a47a9de81a650aee26204f1; thinkphp_show_page_trace=0|0; Hm_lvt_851619594aa1d1fb8c108cde832cc127=1531214708,1531273538; Hm_lpvt_851619594aa1d1fb8c108cde832cc127=1531280549',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000821s ] mysql:dbname=spider;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `zxcms_admin_log` [ RunTime:0.006007s ]
+[ sql ] [ SQL ] INSERT INTO `zxcms_admin_log` (`querystring` , `m` , `c` , `a` , `userid` , `username` , `ip` , `time`) VALUES ('' , 'admin' , 'Regulation' , 'favicon.ico' , 1 , 'admin' , 0 , 1531310350) [ RunTime:0.001304s ]
+---------------------------------------------------------------
+[ 2018-07-11T19:59:10+08:00 ] ::1 ::1 GET /public/static/artDialog/icons/loading.gif
+[ info ] spider.com/public/static/artDialog/icons/loading.gif [运行时间：0.367280s][吞吐率：2.72req/s] [内存消耗：1,789.73kb] [文件加载：30]
+[ info ] [ LANG ] /Applications/MAMP/htdocs/spider_admin/thinkphp/lang/zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'static',
+    2 => 'artDialog',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'spider.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://spider.com/public/static/artDialog/dialog.css',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'user_name=758b8Pv57EwRJDiQ_KrSbGXWraEMoflhLD09ZRqQM39eqQ; user_id=d01eAWMwT5ulTn2u4d1Z4vQz0g4d3QYrcELAL2HH; _ga=GA1.2.1153975451.1531223903; _gid=GA1.2.240096542.1531223903; PHPSESSID=ac005f2b3a47a9de81a650aee26204f1; thinkphp_show_page_trace=0|0; Hm_lvt_851619594aa1d1fb8c108cde832cc127=1531214708,1531273538; Hm_lpvt_851619594aa1d1fb8c108cde832cc127=1531280549',
+)
+[ info ] [ PARAM ] array (
+  'icons' => 'loading.gif',
+)
+[ info ] [ LOG ] INIT File
