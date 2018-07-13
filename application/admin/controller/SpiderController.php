@@ -76,13 +76,17 @@ class SpiderController extends CommonController{
             $snoopy=new \Snoopy();
             $snoopy->fetchlinks($spider_url);
             $data=$snoopy->results;
+//            dump($data);die;
             $data=implode(',',$data);
+//            echo($data);die;
+
 
             //根据抓取规则id获取抓取规则
             $reg=model('regulation')->getInfo($spider_rex);
 
             //匹配所有列表链接
             $links=$this->match_list($data,$reg['reg_list']);
+//            dump($links);die;
 
             //获取入库其他数据
             $other_data=$this->GetOtherData();
@@ -143,6 +147,8 @@ class SpiderController extends CommonController{
 //        dump($dec);die;
         //匹配新闻内容
         preg_match_all($pattern_content,$content,$con);
+//        dump($con);die;
+
         $arr['title']=encodeing(trim($tit[1],''));
         $arr['description']=encodeing(trim($dec[1][0],''));
         $arr['content']=encodeing(trim($con[1][0],''));
