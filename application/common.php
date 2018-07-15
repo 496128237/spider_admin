@@ -197,11 +197,49 @@ function encodeing($str){
 }
 
 /**
- * 将img标签中的src进行二次包装
- * @param $content          内容
- * @param $replaceHttp      需要在src中加入的域名
+ * 替换fckedit中的图片 添加域名
+ * @param  string $content 要替换的内容
+ * @param  string $strUrl 内容中图片要加的域名
+ * @return string
+ * @eg
  */
-function repairContentImg($content, $replaceHttp)
+function replacePicUrl($content = null, $strUrl = null)
 {
-    $patternStr = "<img\\s*([^>]*)\\s*src=\\\"(.*?)\\\"\\s*([^>]*)>";
+    if ($strUrl) {
+        //提取图片路径的src的正则表达式 并把结果存入$matches中
+        preg_match_all("/<img(.*)src=\"([^\"]+)\"[^>]+>/isU", $content, $matches);
+        $img = "";
+        if (!empty($matches)) {
+            //注意，上面的正则表达式说明src的值是放在数组的第三个中
+            $img = $matches[2];
+        } else {
+            $img = "";
+        }
+        if (!empty($img)) {
+            $patterns = array();
+            $replacements = array();
+            foreach ($img as $imgItem) {
+                if (strpos($imgItem, 'http:') !== false || strpos($imgItem, 'https:') !== false) {
+                    continue;
+                }
+                $final_imgUrl = $strUrl . $imgItem;
+                $replacements[] = $final_imgUrl;
+                $img_new = "/" . preg_replace("/\//i", "\/", $imgItem) . "/";
+                $patterns[] = $img_new;
+            }
+
+            //让数组按照key来排序
+            ksort($patterns);
+            ksort($replacements);
+
+            //替换内容
+            $vote_content = preg_replace($patterns, $replacements, $content);
+
+            return $vote_content;
+        } else {
+            return $content;
+        }
+    } else {
+        return $content;
+    }
 }

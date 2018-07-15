@@ -153,7 +153,6 @@ class SpiderController extends CommonController{
             $content['parentstr'] = $other_data['parentstr'];
             $content['orderid'] = $other_data['max_orderid'] + $i + 1;
 
-//            $content['content']=preg_replace('/<img src="\/uploadimages\/\s*([^>]*)>/i','<IMG SRC="http://www.cnarts.net/uploadimages/',$content['content']);
             $content['content'] = preg_replace('/(<img.+?src=")(.*?)/i', '$1http://www.cnarts.net$2', $content['content']);
 
             //格式化入库数据
@@ -195,7 +194,7 @@ class SpiderController extends CommonController{
         $snoopy=new \Snoopy();
         $snoopy->fetch($url);
         $content=$snoopy->results;
-//        dump($content);die;
+        $host = parse_url($url);
         //匹配新闻标题
         preg_match($pattern_title,$content,$tit);
 //        dump($tit);die;
@@ -209,6 +208,7 @@ class SpiderController extends CommonController{
         $arr['title'] = encodeing(trim($tit[1]));
         $arr['description'] = encodeing(trim($dec[1][0]));
         $arr['content'] = encodeing(trim($con[1][0]));
+        $arr['content'] = replacePicUrl($arr['content'], $host['scheme'] . '://' . $host['host']);
 //        dump($arr);die;
         return $arr;
     }
