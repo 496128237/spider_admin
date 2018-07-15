@@ -75,15 +75,20 @@
                                                 <i class="ace-icon fa fa-trash-o bigger-120"></i>
                                             </span>
                                         </a>
+                                        <a href='{:url("spider/one","id=$vo[id]")}' target="_blank" title="抓取单页">
+                                            <span class="btn btn-xs btn-info">
+                                                <i class="ace-icon glyphicon glyphicon-plus bigger-120"></i>
+                                            </span>
+                                        </a>
                                     </div>
                                     {/neq}
                                 </td>
-                                
+
                             </tr>
-                            {/volist}    
+                            {/volist}
                         </tbody>
                     </table>
-                   
+
                 </div><!-- /.span -->
             </div><!-- /.row -->
             {$page}

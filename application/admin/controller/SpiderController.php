@@ -36,11 +36,9 @@ class SpiderController extends CommonController{
     }
 
     public function info(){
-        $id=input('id');
-
-        if ($id){
+        if ($this->id) {
             //根据站点id获取站点信息
-            $info=model('site')->getInfo($id);
+            $info = model('site')->getInfo($this->id);
             //获取所有规则信息
             $reginfo=model('regulation')->getAllReg();
 
@@ -54,7 +52,7 @@ class SpiderController extends CommonController{
     }
 
     /**
-     * 采集
+     * 采集列表页
      */
     public function edit(){
         $spider_rex=input('spider_rex');//采集规则
@@ -76,7 +74,7 @@ class SpiderController extends CommonController{
             $snoopy=new \Snoopy();
             $snoopy->fetchlinks($spider_url);
             $data=$snoopy->results;
-//            dump($data);die;
+//            print_r($data);die;
             $data=implode(',',$data);
 //            echo($data);die;
 
@@ -86,6 +84,8 @@ class SpiderController extends CommonController{
 
             //匹配所有列表链接
             $links=$this->match_list($data,$reg['reg_list']);
+            $links = array_unique($links);//去除数组重复值
+            $links = array_values($links);//重置索引
 //            dump($links);die;
 
             //获取入库其他数据
@@ -114,6 +114,14 @@ class SpiderController extends CommonController{
         }else{
             $this->error('非法操作');
         }
+    }
+
+    /**
+     * 采集单条数据
+     */
+    public function one()
+    {
+        return $this->fetch();
     }
 
     /**
@@ -149,9 +157,9 @@ class SpiderController extends CommonController{
         preg_match_all($pattern_content,$content,$con);
 //        dump($con);die;
 
-        $arr['title']=encodeing(trim($tit[1],''));
-        $arr['description']=encodeing(trim($dec[1][0],''));
-        $arr['content']=encodeing(trim($con[1][0],''));
+        $arr['title'] = encodeing(trim($tit[1]));
+        $arr['description'] = encodeing(trim($dec[1][0]));
+        $arr['content'] = encodeing(trim($con[1][0]));
 //        dump($arr);die;
         return $arr;
     }
