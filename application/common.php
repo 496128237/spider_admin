@@ -195,3 +195,13 @@ function encodeing($str){
 
     return  $str_encode;
 }
+
+/**
+ * 将img标签中的src进行二次包装
+ * @param $content          内容
+ * @param $replaceHttp      需要在src中加入的域名
+ */
+function repairContentImg($content, $replaceHttp)
+{
+    $patternStr = "<img\\s*([^>]*)\\s*src=\\\"(.*?)\\\"\\s*([^>]*)>";
+}

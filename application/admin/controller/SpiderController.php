@@ -70,6 +70,11 @@ class SpiderController extends CommonController{
             $this->error('请填写采集数量');
         }
 
+        if ($spider_rex == 7) {
+            $this->collection_knowledge($spider_rex, $spider_url, $spider_num);
+            die;
+        }
+
         if ($this->id){
             $snoopy=new \Snoopy();
             $snoopy->fetchlinks($spider_url);
@@ -114,6 +119,50 @@ class SpiderController extends CommonController{
         }else{
             $this->error('非法操作');
         }
+    }
+
+    /**
+     * 采集收藏知识列表页
+     * $spider_rex      采集规则
+     * $spider_url      采集地址
+     * $spider_num      采集数量
+     */
+    public function collection_knowledge($spider_rex, $spider_url, $spider_num)
+    {
+        $snoopy = new \Snoopy();
+        $snoopy->fetch($spider_url);
+        $data = $snoopy->results;
+        $link_rex = '/<div class="new_cottent">\s+.*\s+<\/div>/isU';
+        preg_match_all($link_rex, $data, $con);
+        preg_match_all('/<a .*?>.*?<\/a>/', $con[0][0], $arr);
+        foreach ($arr[0] as $item) {
+            preg_match_all('/href=\'([^\']+)/', $item, $href);
+            $links[] = 'http://www.cnarts.net/CWEB/Appreciation_collection/index_read.asp' . $href[1][0];
+        }
+        //根据抓取规则id获取抓取规则
+        $reg = model('regulation')->getInfo($spider_rex);
+        //获取入库其他数据
+        $other_data = $this->GetOtherData();
+        //循环采集数量
+        $data = array();
+        for ($i = 0; $i < $spider_num; $i++) {
+            //抓取详情页内容
+            $content = $this->GetNewsContent($links[$i], $reg['reg_title'], $reg['reg_dec'], $reg['reg_content']);
+            $content['classid'] = $other_data['id'];
+            $content['parentid'] = $other_data['parentid'];
+            $content['parentstr'] = $other_data['parentstr'];
+            $content['orderid'] = $other_data['max_orderid'] + $i + 1;
+
+//            $content['content']=preg_replace('/<img src="\/uploadimages\/\s*([^>]*)>/i','<IMG SRC="http://www.cnarts.net/uploadimages/',$content['content']);
+            $content['content'] = preg_replace('/(<img.+?src=")(.*?)/i', '$1http://www.cnarts.net$2', $content['content']);
+
+            //格式化入库数据
+            $data[] = $this->FormatData($content);
+        }
+//        dump($data);die;
+        //入库
+        $status = $this->site_db->table($this->tables)->insertAll($data);
+        $this->success('成功抓取' . $status . '条数据', 'site/index');
     }
 
     /**
@@ -210,6 +259,5 @@ class SpiderController extends CommonController{
 
         return $res;
     }
-
 
 }
