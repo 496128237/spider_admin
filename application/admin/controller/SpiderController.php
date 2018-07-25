@@ -15,6 +15,7 @@ class SpiderController extends CommonController{
     public $classid;//classid
     public $site_db;//站点数据库
     public $tables;//入库表
+    public $class;//文章分类
 
     public function __construct(\think\Request $request = null)
     {
@@ -33,6 +34,10 @@ class SpiderController extends CommonController{
         //链接数据库
         $this->site_db=Db::connect($dbconfig);
 
+        //获取文章分类
+        $map['parentid'] = $tb['sql_classparentid'];
+        $map['checkinfo'] = 'true';
+        $this->class = $this->site_db->table($tb['sql_classtable'])->field('id,classname')->where($map)->select();
     }
 
     public function info(){
@@ -44,6 +49,7 @@ class SpiderController extends CommonController{
 
             $this->assign('reginfo',$reginfo);
             $this->assign('info',$info);
+            $this->assign('class', $this->class);
         }else{
             $this->error('非法操作');
         }
@@ -172,11 +178,13 @@ class SpiderController extends CommonController{
         if ($this->id) {
             //根据站点id获取站点信息
             $info = model('site')->getInfo($this->id);
+
             //获取所有规则信息
             $reginfo = model('regulation')->getAllReg();
 
             $this->assign('reginfo', $reginfo);
             $this->assign('info', $info);
+            $this->assign('class', $this->class);
         } else {
             $this->error('非法操作');
         }

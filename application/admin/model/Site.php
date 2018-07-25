@@ -21,7 +21,7 @@ class Site extends \think\Model {
      * @throws \think\exception\DbException
      */
     public function getInfo($id) {
-        $res = $this->field('id,name,link,tip,listorder,updatetime,display,sql_ip,sql_user,sql_pass,sql_database,sql_table')
+        $res = $this->field('id,name,link,tip,listorder,updatetime,display,sql_ip,sql_user,sql_pass,sql_database,sql_table,sql_classtable,sql_classparentid')
             ->where(array('id' => $id))
             ->find();
         if ($res) {
