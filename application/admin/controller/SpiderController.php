@@ -169,7 +169,96 @@ class SpiderController extends CommonController{
      */
     public function one()
     {
+        if ($this->id) {
+            //根据站点id获取站点信息
+            $info = model('site')->getInfo($this->id);
+            //获取所有规则信息
+            $reginfo = model('regulation')->getAllReg();
+
+            $this->assign('reginfo', $reginfo);
+            $this->assign('info', $info);
+        } else {
+            $this->error('非法操作');
+        }
         return $this->fetch();
+    }
+
+    /**
+     * 单条数据入库
+     */
+    public function one_edit()
+    {
+        $spider_rex = input('spider_rex');//采集规则
+        $spider_url = input('spider_url');//采集地址
+        $spider_num = 1;//采集数量
+
+        //验证字段
+        if (empty($spider_rex)) {
+            $this->error('请选择采集规则');
+        }
+        if (empty($spider_url)) {
+            $this->error('请填写采集地址');
+        }
+        if ($spider_rex == 7) {
+            $this->one_collection_knowledge($spider_rex, $spider_url, $spider_num);
+            die;
+        }
+
+        if ($this->id) {
+            //根据抓取规则id获取抓取规则
+            $reg = model('regulation')->getInfo($spider_rex);
+            //获取入库其他数据
+            $other_data = $this->GetOtherData();
+
+            //循环采集数量
+            $data = array();
+            for ($i = 0; $i < $spider_num; $i++) {
+                //抓取详情页内容
+                $content = $this->GetNewsContent($spider_url, $reg['reg_title'], $reg['reg_dec'], $reg['reg_content']);
+                $content['classid'] = $other_data['id'];
+                $content['parentid'] = $other_data['parentid'];
+                $content['parentstr'] = $other_data['parentstr'];
+                $content['orderid'] = $other_data['max_orderid'] + $i + 1;
+                //格式化入库数据
+                $data[] = $this->FormatData($content);
+            }
+//            dump($data);die;
+            //入库
+            $status = $this->site_db->table($this->tables)->insertAll($data);
+            $this->success('成功抓取' . $status . '条数据', 'site/index');
+        } else {
+            $this->error('非法操作');
+        }
+    }
+
+    /**
+     * 收藏知识单条数据入库
+     */
+    public function one_collection_knowledge($spider_rex, $spider_url, $spider_num)
+    {
+        //根据抓取规则id获取抓取规则
+        $reg = model('regulation')->getInfo($spider_rex);
+        //获取入库其他数据
+        $other_data = $this->GetOtherData();
+        //循环采集数量
+        $data = array();
+        for ($i = 0; $i < $spider_num; $i++) {
+            //抓取详情页内容
+            $content = $this->GetNewsContent($spider_url, $reg['reg_title'], $reg['reg_dec'], $reg['reg_content']);
+            $content['classid'] = $other_data['id'];
+            $content['parentid'] = $other_data['parentid'];
+            $content['parentstr'] = $other_data['parentstr'];
+            $content['orderid'] = $other_data['max_orderid'] + $i + 1;
+
+            $content['content'] = preg_replace('/(<img.+?src=")(.*?)/i', '$1http://www.cnarts.net$2', $content['content']);
+
+            //格式化入库数据
+            $data[] = $this->FormatData($content);
+        }
+//        dump($data);die;
+        //入库
+        $status = $this->site_db->table($this->tables)->insertAll($data);
+        $this->success('成功抓取' . $status . '条数据', 'site/index');
     }
 
     /**

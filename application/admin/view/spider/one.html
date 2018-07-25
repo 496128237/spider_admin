@@ -19,7 +19,8 @@
     <div class="row">
         <div class="col-xs-12">
             <!-- PAGE CONTENT BEGINS -->
-            <form class="form-horizontal" role="form" action="{:input('id')?'edit':'add'}" method="post" name="myfrom">
+            <form class="form-horizontal" role="form" action="{:input('id')?'one_edit':'add'}" method="post"
+                  name="myfrom">
                 {:input('id')?'<input type="hidden" value="'.$info['id'].'" name="id">':''}
                 <div class="form-group">
                     <label class="col-sm-3 control-label no-padding-right">站点名称</label>
@@ -80,7 +81,7 @@
 
                     <div class="col-sm-9">
                         <input type="text" name="spider_url" placeholder="采集地址" value="" class="col-xs-10 col-sm-5"/>
-                        <label class="control-label">填写文章列表页地址</label>
+                        <label class="control-label">填写文章详情页地址</label>
                     </div>
                 </div>
                 <div class="space-4"></div>
@@ -92,16 +93,6 @@
                         <input type="text" name="spider_classid" placeholder="采集分类" value=""
                                class="col-xs-10 col-sm-5"/>
                         <label class="control-label">填写文章所属分类的classid</label>
-                    </div>
-                </div>
-                <div class="space-4"></div>
-
-                <div class="form-group">
-                    <label class="col-sm-3 control-label no-padding-right"> 采集数量 </label>
-
-                    <div class="col-sm-9">
-                        <input type="text" name="spider_num" placeholder="采集数量" value="" class="col-xs-10 col-sm-5"/>
-                        <label class="control-label">填写需采集文章的数量</label>
                     </div>
                 </div>
                 <div class="space-4"></div>
